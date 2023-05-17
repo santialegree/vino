@@ -86,11 +86,6 @@
  */
 
 
-
-.about h2 {
-  font-family: "MiTipografia";
-}
-
 .slick-prev:before,
 .slick-next:before {
   color: #fff;
@@ -144,65 +139,54 @@
     font-family: "Essays";
     }
     
-    /* Estilo del carrusel de fotos */
-    .photo-carousel {
+   /* Estilo del carrusel de fotos */
+   .photo-carousel {
     margin: 50px auto 0;
-    max-width: 680px;
-    }
-    
-    .photo-carousel img {
+    max-width: 600px; /* Ajusta el ancho máximo del carrusel según tus necesidades */
+    overflow: hidden; /* Asegura que las imágenes no se desborden del carrusel */
+  }
+  
+  .photo-carousel img {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     max-width: 100%;
-    /* height: auto; */
-    height: 40rem; /* establecer la altura deseada */
-    object-fit: cover; /* asegura que la imagen se ajuste al tamaño especificado sin deformarse */
-    }
-    
+    height: auto;
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible en el carrusel */
+    object-fit: contain; /* Ajusta la imagen para que quepa completamente en el carrusel sin recortarse */
+    max-height: 600px; /* Ajusta la altura máxima de la imagen según tus necesidades */
+  }
     
     /* Estilo de los botones de previous y next */
     .slick-prev,
     .slick-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
+      display: none;
     }
     
     .slick-prev {
-    left: 20px;
+    display: none;
+    
     }
     
     .slick-next {
-    right: 20px;
+    display: none;
+   
     }
     
     /* Estilo de los puntos del carrusel */
     .slick-dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: none;
+    
     }
     
     .slick-dots li {
-    display: inline-block;
-    margin: 0 5px;
+      display: none;
     }
     
     .slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    background-color: transparent;
-    cursor: pointer;
+      display: none;
     }
     
     .slick-dots li.slick-active button {
-    background-color: #fff;
+      display: none;
     }
 
 /* SECCION DISCOS*/
