@@ -15,20 +15,6 @@
     cursor: pointer; /* Usa el cursor de puntero cuando pasa sobre una opción */
   }
 
-  
-
-  /* Tipografia decargada */
-
-  @font-face {
-    font-family: "MiTipografia";
-    src: url("fonts/1942.ttf");
-  }
-  @font-face {
-    font-family: "Essays";
-    src: url("fonts/Essays1743.ttf");
-
-  }
- 
 
   header {
     background-image: url('img/random\ 2.jpg');
@@ -74,16 +60,37 @@
     color: violet;
     font-size: 24px;
   }
+
+  @media screen and (max-width: 600px) {
+    
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      /* display:flow-root; */
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      transition: all 0.3s ease-in-out;
+    } 
+
+  }
  
-  /* crear la modalidad desplegable */
-
-
-/* SECCION ABOUT (QUIENES SOMOS) */
-
-
-
-/* nuevos cambios
- */
 
 
 .slick-prev:before,
@@ -141,8 +148,8 @@
     
    /* Estilo del carrusel de fotos */
    .photo-carousel {
-    margin: 50px auto 0;
-    max-width: 600px; /* Ajusta el ancho máximo del carrusel según tus necesidades */
+    margin: 50px auto 0; 
+    max-width: 480px; /* Ajusta el ancho máximo del carrusel según tus necesidades */
     overflow: hidden; /* Asegura que las imágenes no se desborden del carrusel */
   }
   
@@ -153,6 +160,24 @@
     width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible en el carrusel */
     object-fit: contain; /* Ajusta la imagen para que quepa completamente en el carrusel sin recortarse */
     max-height: 600px; /* Ajusta la altura máxima de la imagen según tus necesidades */
+  }
+
+  @media screen and (max-width: 600px) {
+    .photo-carousel {
+      margin: 50px auto 0; 
+      max-width: 480px; /* Ajusta el ancho máximo del carrusel según tus necesidades */
+      overflow: hidden; /* Asegura que las imágenes no se desborden del carrusel */
+    }
+    
+    .photo-carousel img {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      max-width: 100%;
+      height: 26rem;
+      width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible en el carrusel */
+      object-fit: contain; /* Ajusta la imagen para que quepa completamente en el carrusel sin recortarse */
+      max-height: 600px; /* Ajusta la altura máxima de la imagen según tus necesidades */
+    }
+
   }
     
     /* Estilo de los botones de previous y next */
@@ -497,13 +522,11 @@ p {
 
 @media screen and (max-width: 600px) {
   footer p {
-    margin: 0;
-    font-size: 0.7rem;
-    font-weight: 300;
+   margin: 0;
+    font-size: 0.3rem;
+    font-weight: 500; 
   }
-    
-  }
-  
+}
 /* 
 galery */
 
@@ -546,8 +569,42 @@ h1 {
 }
 
 .gallery-image:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
+
+@media screen and (max-width: 600px) {
+  .gallery-image:hover {
+    transform: scale(1.05);
+    
+  }
+}
+/* 
+boton arriba */
+
+#myBtn {
+  display: none; /* Oculta el botón al principio */
+  position: fixed; /* Fija el botón en la pantalla */
+  bottom: 20px; /* Coloca el botón en la esquina inferior derecha */
+  right: 20px; /* Ajusta la posición a la derecha */
+  z-index: 99; /* Hace que el botón esté por encima de otros elementos */
+  width: 40px; /* Ancho del botón */
+  height: 40px; /* Alto del botón */
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Borde redondeado para formar un círculo */
+  padding: 0; /* Sin relleno interno */
+  cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+}
+
+#myBtn img {
+  width: 100%; /* Ajusta la imagen para ocupar todo el espacio del botón */
+  height: 100%; /* Ajusta la imagen para ocupar todo el espacio del botón */
+  object-fit: contain; /* Ajusta la imagen dentro del espacio del botón sin deformarse */
+}
+
+
+
+
 
 
 
