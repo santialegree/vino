@@ -1,0 +1,569 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  /* Usa una imagen de un círculo como cursor */
+  * {
+    cursor: url("img/opcion.png"), default; 
+  }
+  
+  .opcion:hover {
+    cursor: pointer; /* Usa el cursor de puntero cuando pasa sobre una opción */
+  }
+
+  
+
+  /* Tipografia decargada */
+
+  @font-face {
+    font-family: "MiTipografia";
+    src: url("fonts/1942.ttf");
+  }
+  @font-face {
+    font-family: "Essays";
+    src: url("fonts/Essays1743.ttf");
+
+  }
+ 
+
+  header {
+    background-image: url('img/random\ 2.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+  }
+  
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "MiTipografia";
+    
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: violet;
+    font-size: 24px;
+  }
+ 
+  /* crear la modalidad desplegable */
+
+
+/* SECCION ABOUT (QUIENES SOMOS) */
+
+
+
+/* nuevos cambios
+ */
+
+
+
+.about h2 {
+  font-family: "MiTipografia";
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #fff;
+  font-size: 24px;
+  text-indent: -9999px; 
+}
+
+.slick-prev:before {
+  content: "\f104";
+}
+
+.slick-next:before {
+  content: "\f105";
+}
+
+.slick-prev,
+.slick-next {
+  background-color: #222;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.7;
+  text-indent: -9999px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  opacity: 1;
+}
+
+.slick-dots li {
+    display: none;
+  }
+
+/* Estilo de la sección about */
+.about {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    }
+    
+    .about h2 {
+    font-size: 3rem;
+    text-align: center;
+    }
+    
+    .about p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Essays";
+    }
+    
+    /* Estilo del carrusel de fotos */
+    .photo-carousel {
+    margin: 50px auto 0;
+    max-width: 680px;
+    }
+    
+    .photo-carousel img {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    /* height: auto; */
+    height: 40rem; /* establecer la altura deseada */
+    object-fit: cover; /* asegura que la imagen se ajuste al tamaño especificado sin deformarse */
+    }
+    
+    
+    /* Estilo de los botones de previous y next */
+    .slick-prev,
+    .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    }
+    
+    .slick-prev {
+    left: 20px;
+    }
+    
+    .slick-next {
+    right: 20px;
+    }
+    
+    /* Estilo de los puntos del carrusel */
+    .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    
+    .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+    }
+    
+    .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+    }
+    
+    .slick-dots li.slick-active button {
+    background-color: #fff;
+    }
+
+/* SECCION DISCOS*/
+
+.discototal {
+  background-image: url('img/mars-g8109654bd_1280.jpg');
+  
+  background-size: 100% 100%; 
+}
+
+.discototal h1 {
+  text-align: center; /* Centra el texto */
+  font-family: "MiTipografia";
+  color: white;
+  padding: 4rem;
+  font-size: 3.5rem;
+}
+
+
+.discos-container {
+   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+   
+}
+
+.discos-item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  
+}
+
+.discos-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.discos-item:hover {
+  transform: scale(1.05);
+}
+
+.discos-item .discos-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(-180deg);
+  background-color: #444343;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.discos-item:hover .discos-info {
+  transform: rotateY(0);
+}
+
+.discos-item .discos-info h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.discos-item .discos-info a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1db954;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.discos-item .discos-info a:hover {
+  background-color: #0f764a;
+}
+
+/* Media query para pantallas de 600px o menos */
+@media screen and (max-width: 600px) {
+  .discos-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    
+  }
+  
+  .discos-item {
+    height: 250px;
+   
+  }
+  
+  .discos-item .discos-info h3 {
+    font-size: 18px;
+  }
+  
+  .discos-item .discos-info a {
+    padding: 8px 16px;  
+    font-size: 14px;
+  }
+}
+
+/* PROXIMAS FECHAS */
+
+.proximas-fechas {
+  background: linear-gradient(to bottom, #333333, #222222);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.grid-container-proximas-fechas {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.article1,
+.article2,
+.article3 {
+  background-color: #444444;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  width: 30%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.article1:hover,
+.article2:hover,
+.article3:hover {
+  background-color: #b455b6;
+}
+
+.ESMiTipografia{
+  color: white;
+  font-family: 'MiTipografia', sans-serif; 
+}
+
+.MiTipografia {
+  color: white;
+  /* font-family: 'Essays', sans-serif; */
+}
+
+.link1 {
+  color: #FFA500;
+}
+
+.article1 dl,
+.article2 dl,
+.article3 dl {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.article1 dt,
+.article2 dt,
+.article3 dt {
+  font-weight: bold;
+}
+
+.article1 dd,
+.article2 dd,
+.article3 dd {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Estilo para el enlace "Compra tus entradas aquí" */
+.article1 dd a,
+.article2 dd a,
+.article3 dd a {
+  color: #f79a3e;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Estilo para el contenedor de cada fecha */
+.article1,
+.article2,
+.article3 {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 1rem;
+  width: calc(33.33% - 2rem); /* Para que los contenedores se ajusten en una misma fila */
+  display: inline-block;
+}
+
+/* Estilo para cuando el cursor está sobre el contenedor de cada fecha */
+.article1:hover,
+.article2:hover,
+.article3:hover {
+  background-color: #3c3c3c;
+}
+
+/* Estilo para cuando el cursor está sobre la descripción de cada fecha */
+.article1:hover dd,
+.article2:hover dd,
+.article3:hover dd {
+  color: #f79a3e;
+}
+
+/* Estilo para cuando el cursor está sobre el enlace "Compra tus entradas aquí" */
+.article1:hover dd a,
+.article2:hover dd a,
+.article3:hover dd a {
+  color: #7b2cbf;
+}
+
+/* Media queries para dispositivos de hasta 768px */
+@media only screen and (max-width: 768px) {
+  .grid-container-proximas-fechas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .article1,
+  .article2,
+  .article3 {
+    width: 90%;
+  }
+}
+
+/* Media queries para dispositivos de hasta 480px */
+@media only screen and (max-width: 480px) {
+  .article1,
+  .article2,
+  .article3 {
+    padding: 1rem;
+  }
+
+  .article1 dl,
+  .article2 dl,
+  .article3 dl {
+    font-size: 1rem;
+  }
+
+  .article1 dd,
+  .article2 dd,
+  .article3 dd {
+    font-size: 1rem;
+  }
+}
+
+/* footer estilos */
+
+footer {
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 1rem;
+}
+
+.redes-sociales a {
+  display: inline-flex;
+  width: 2rem; /* ancho de la imagen */
+  height: 2rem; /* alto de la imagen */
+  color: #FFFFFF;
+  transition: all 0.3s ease-in-out;
+}
+
+.redes-sociales a:hover {
+  transform: scale(1.2);
+  color: #FFA500;
+}
+
+.redes-sociales a:last-child {
+  margin-right: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Essays";
+}
+
+@media screen and (max-width: 600px) {
+  footer p {
+    margin: 0;
+    font-size: 0.7rem;
+    font-weight: 300;
+  }
+    
+  }
+  
+/* 
+galery */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #555;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: "MiTipografia";
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  height: 200px; /* establece una altura fija */
+  object-fit: cover; /* ajusta la imagen dentro del contenedor */
+  transition: transform 0.3s;
+  border-radius: 1rem;
+}
+
+.gallery-image:hover {
+  transform: scale(1.5);
+}
+
+
+
